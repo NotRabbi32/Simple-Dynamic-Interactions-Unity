@@ -1,0 +1,16 @@
+{
+    "name": "Rabbi32.SimpleDynamicInteractions.Sample",
+    "rootNamespace": "Rabbi32.SimpleDynamicInteractions.Sample",
+    "references": [
+        "GUID:85067b93b333e37439d29fd1e86592c4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
