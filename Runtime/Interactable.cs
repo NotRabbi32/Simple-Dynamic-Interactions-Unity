@@ -17,9 +17,16 @@ namespace Rabbi32.SimpleDynamicInteractions
 
         [Space(10)] 
         [Header("Interaction Events")] 
+        [Tooltip("Called when Interact button is pressed")]
         [SerializeField] private UnityEvent onInteractStarted;
+        [Tooltip("Called when Interact button is held")]
         [SerializeField] private UnityEvent onInteractPreformed;
+        [Tooltip("Called after Interact button is released")]
         [SerializeField] private UnityEvent onInteractCanceled;
+        [Tooltip("Called when looking at interactable")]
+        [SerializeField] private UnityEvent onLookAt;
+        [Tooltip("Called when looking away from interactable")]
+        [SerializeField] private UnityEvent onLookAway;
 
         public string DisplayName => displayName;
 
@@ -39,27 +46,29 @@ namespace Rabbi32.SimpleDynamicInteractions
         {
             if (ctx.started)
             {
-                onInteractStarted.Invoke();
+                onInteractStarted?.Invoke();
             }
 
             if (ctx.performed)
             {
-                onInteractPreformed.Invoke();
+                onInteractPreformed?.Invoke();
             }
 
             if (ctx.canceled)
             {
-                onInteractCanceled.Invoke();
+                onInteractCanceled?.Invoke();
             }
         }
 
         public void OnLookAt()
         {
+            onLookAt?.Invoke();
             _outline.enabled = true;
         }
 
         public void OnLookAway()
         {
+            onLookAway?.Invoke();
             _outline.enabled = false;
         }
     }

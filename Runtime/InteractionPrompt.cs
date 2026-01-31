@@ -10,7 +10,7 @@ namespace Rabbi32.SimpleDynamicInteractions
         [SerializeField] private Vector3 worldOffset = new(0f, 1f, 0f);
         [SerializeField] private string keyHint = "[E]";
 
-        private Camera _cam;
+        private Camera _cam; //make sure tag is set to MainCamera to avoid problems
         private Transform _target;
         private Canvas _canvas;
         private RectTransform _canvasRect;
@@ -18,7 +18,7 @@ namespace Rabbi32.SimpleDynamicInteractions
 
         private void Awake()
         {
-            _cam = Camera.main;
+            _cam = Camera.main is null ? FindFirstObjectByType<Camera>() : Camera.main;
             _labelRect = label.rectTransform;
             _canvas = label.GetComponentInParent<Canvas>();
             _canvasRect = _canvas.GetComponent<RectTransform>();

@@ -753,6 +753,12 @@ MonoBehaviour:
   onInteractCanceled:
     m_PersistentCalls:
       m_Calls: []
+  onLookAt:
+    m_PersistentCalls:
+      m_Calls: []
+  onLookAway:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7674467165345000214
 PrefabInstance:
   m_ObjectHideFlags: 0

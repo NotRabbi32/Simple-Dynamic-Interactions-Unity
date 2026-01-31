@@ -5,10 +5,11 @@ namespace Rabbi32.SimpleDynamicInteractions
 {
     public class PlayerInteractor : MonoBehaviour
     {
-        public Transform interactorSource;
-        public float interactRange;
-        [SerializeField] private LayerMask layerMask;
-        [SerializeField] private InteractionPrompt prompt;
+        [Tooltip("example: the Players Camera ")]
+        [SerializeField] private Transform interactorSource;
+        [SerializeField] private float interactRange;
+        [SerializeField] private LayerMask layerMask; //set to default if you don't have dedicated interactable layer
+        [SerializeField] private InteractionPrompt prompt; //there is a prefab and script for this
         [SerializeField] private InputActionReference interactReference;
 
         private IInteractable _lookingAt;
