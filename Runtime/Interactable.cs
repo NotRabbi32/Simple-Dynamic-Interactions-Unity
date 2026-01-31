@@ -25,7 +25,7 @@ namespace Rabbi32.SimpleDynamicInteractions
 
         public bool CanInteract() => isEnabled;
         private Outline _outline;
-
+        
         private void Start()
         {
             _outline = gameObject.AddComponent<Outline>();
